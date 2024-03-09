@@ -6,9 +6,10 @@ import { colors } from "../../theme/colors"
 
 interface HeaderProps {
   onAddTask: () => void
+  onTaskInputChange: (text: string) => void
 }
 
-export const Header = ({ onAddTask }: HeaderProps) => {
+export const Header = ({ onAddTask, onTaskInputChange }: HeaderProps) => {
   return (
     <View style={styles.headerContainer}>
       <Image style={styles.imageLogo} source={todoImage} />
@@ -18,6 +19,7 @@ export const Header = ({ onAddTask }: HeaderProps) => {
           style={styles.inputTask} 
           placeholder="Adicione uma nova tarefa"
           placeholderTextColor={colors["gray-300"]}
+          onChangeText={(text) => { onTaskInputChange(text)}}
         />
 
         <TouchableOpacity 

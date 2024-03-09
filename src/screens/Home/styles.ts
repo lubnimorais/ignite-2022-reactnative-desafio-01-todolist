@@ -81,5 +81,35 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
     color: `${colors["gray-200"]}`
+  },
+
+  listContainer: {
+    marginTop: 20
+  },
+
+  emptyListContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    marginTop: 48
+  },
+
+  emptyListImage: {
+    width: 56,
+    height: 56,
+  },
+
+  emptyListText1: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: `${colors["gray-300"]}`,
+
+    marginTop: 16,
+  },
+
+  emptyListText2: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: `${colors["gray-300"]}`,
   }
 })
