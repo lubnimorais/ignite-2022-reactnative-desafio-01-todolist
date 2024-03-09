@@ -5,7 +5,7 @@ import { HomeScreen } from './src/screens/Home';
 export default function App() {
   return (
     <>
-      <StatusBar style="dark" backgroundColor="transparent" translucent />
+      <StatusBar style="light" backgroundColor="transparent" translucent />
       <HomeScreen />
     </>
   );
