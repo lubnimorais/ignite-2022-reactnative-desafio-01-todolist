@@ -5,11 +5,12 @@ import todoImage from '../../assets/Logo.png'
 import { colors } from "../../theme/colors"
 
 interface HeaderProps {
+  valueInput: string;
   onAddTask: () => void
   onTaskInputChange: (text: string) => void
 }
 
-export const Header = ({ onAddTask, onTaskInputChange }: HeaderProps) => {
+export const Header = ({ valueInput, onAddTask, onTaskInputChange }: HeaderProps) => {
   return (
     <View style={styles.headerContainer}>
       <Image style={styles.imageLogo} source={todoImage} />
@@ -19,6 +20,7 @@ export const Header = ({ onAddTask, onTaskInputChange }: HeaderProps) => {
           style={styles.inputTask} 
           placeholder="Adicione uma nova tarefa"
           placeholderTextColor={colors["gray-300"]}
+          value={valueInput}
           onChangeText={(text) => { onTaskInputChange(text)}}
         />
 

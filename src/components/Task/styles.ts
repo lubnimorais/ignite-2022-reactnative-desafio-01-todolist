@@ -4,19 +4,25 @@ import { colors } from "../../theme/colors";
 export const styles = StyleSheet.create({
   taskContainer: {
     width: '100%',
+    height: 64,
 
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-between',
+
+    marginBottom: 8,
+
+    paddingVertical: 12,
+    paddingHorizontal: 8,
   },
 
   taskDoneButton: {
     flexDirection: 'row',
-    alignItems: 'center'
+    flex: 1,
+    alignItems: 'center',
   },
 
   taskText: {
-    flex: 1,
-
     marginLeft: 8,
 
     fontSize: 14,
@@ -24,5 +30,20 @@ export const styles = StyleSheet.create({
     lineHeight: 14
   },
 
-  taskRemoveButton: {}
+  taskDoneText: {
+    marginLeft: 8,
+
+    fontSize: 14,
+    color: `${colors["gray-300"]}`,
+    lineHeight: 14,
+    textDecorationLine: 'line-through'
+  },
+
+  taskRemoveButton: {
+    width: 32,
+    height: 32,
+
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 })
